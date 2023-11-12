@@ -42,7 +42,7 @@ public class ProductController {
                 productModel.add(linkTo(methodOn(ProductController.class).getOneProduct(id)).withSelfRel());
             }
         }
-        return ResponseEntity.status(HttpStatus.OK).body();
+        return ResponseEntity.status(HttpStatus.OK).body(productList);
     }
 
     @GetMapping("/products/{id}")
